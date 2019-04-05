@@ -1,4 +1,9 @@
 package com.deha.ecommerceapp.repository;
 
-public class UserRepository {
+import com.deha.ecommerceapp.model.User;
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserRepository extends CrudRepository<User, Integer> {
+
+    User findByUsername(String username);
 }
