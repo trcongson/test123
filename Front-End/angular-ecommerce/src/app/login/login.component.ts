@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     this.apiService.login(loginPayload).subscribe(data => {
       if(data.status === 200) {
         window.localStorage.setItem('token', data.result.token);
-        this.router.navigate(['list-user']);
+        this.router.navigate(['ecommerce']);
       }else {
         this.invalidLogin = true;
         alert(data.message);
